@@ -1,0 +1,40 @@
+@charset "utf-8";
+$sc:20;  //声明一个变量
+
+
+%bar{
+    width:320/$sc+rem;
+    height:40/$sc+rem;
+}
+header{
+     @extend %bar;
+     background: #00B38A;
+     opacity: 0.5;
+     position:fixed;
+     top:0;
+}
+section{
+      background: blue;
+      position: absolute;
+      top:40/$sc+rem;
+      width:100%;
+      height:(568-80)/$sc+rem;
+}
+@media (min-width:360px){
+    section{
+         height:(568-80+2)/$sc+rem;
+    }
+}
+@media (min-width:768px){
+    section{
+         height:(568-221)/$sc+rem;
+    }
+}
+
+footer{
+    @extend %bar;
+     background: #00B38A;
+     opacity: 0.5;
+     position:fixed;
+     bottom:0;
+}
